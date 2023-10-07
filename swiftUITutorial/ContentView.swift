@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack() {
+            Image("depsi")
             VStack(alignment: .leading) {
                 Text("Turtle Rock")
                     .font(.title)
@@ -19,6 +20,7 @@ struct ContentView: View {
                     Spacer()
                     Text("California")
                         .font(.subheadline)
+                    
                 }
             }
         }
@@ -31,3 +33,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+// Create a custom image view
+
