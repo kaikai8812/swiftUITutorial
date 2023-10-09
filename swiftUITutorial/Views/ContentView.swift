@@ -18,6 +18,8 @@ struct ContentView: View {
                 .padding(.bottom, -130)
 
             VStack(alignment: .leading) {
+                
+                LandmarkRow(landMark: landmarks[0])
                 Text("Turtle Rock")
                     .font(.title)
                 HStack {
