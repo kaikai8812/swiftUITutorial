@@ -23,9 +23,9 @@ struct LandmarkRow: View {
     }
 }
 
-struct LandmarkRow_Previews: PreviewProvider {
-    static var previews: some View {
-//        LandmarkRow()
+#Preview {
+    Group {
         LandmarkRow(landMark: landmarks[0])
+        LandmarkRow(landMark: landmarks[1])
     }
 }
