@@ -9,9 +9,17 @@ import SwiftUI
 
 
 struct LandmarkList: View {
+    @State private var showFavoriteOnly = false
+    
+    var filterLandMarks: [Landmark] {
+        landmarks.filter { landmark in
+            (!showFavoriteOnly || landmark.isFavorite)
+        }
+    }
+    
     var body: some View {
         NavigationSplitView {
-            List(landmarks) { landmark in
+            List(filterLandMarks) { landmark in
                 NavigationLink {
                     LandmarkDetail(landmark: landmark) // Viewを直接置くだけで遷移できる
                 } label: {
