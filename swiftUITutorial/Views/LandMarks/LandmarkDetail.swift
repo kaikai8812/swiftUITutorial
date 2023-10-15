@@ -10,9 +10,18 @@ import MapKit
 
 struct LandmarkDetail: View {
     
+    @Environment(ModelData.self) var modelData
     var landmark: Landmark
     
+    //  initでlistから取得してくるlandMarkと、environmentから取得するlandmarkで、合致するidを取得する (なんのために使うのか？)
+    var landMarkIndex: Int {
+        modelData.landmarks.firstIndex { $0.id == landmark.id }!
+    }
+    
     var body: some View {
+        
+        @Bindable var modelData = modelData
+        
         ScrollView {
             MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300)
@@ -22,10 +31,12 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                
-                LandmarkRow(landMark: landmark)
-                Text(landmark.name)
-                    .font(.title)
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landMarkIndex].isFavorite)  //  modelDataというプロパティを、アプリ全体で参照しているので、favoriteの変換を参照できる。
+                }
+            
                 HStack {
                     Text(landmark.park)
                     Spacer()
@@ -48,5 +59,7 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: ModelData().landmarks[0])
+    let modelData = ModelData()
+    return LandmarkDetail(landmark: modelData.landmarks[0])
+        .environment(modelData)
 }
