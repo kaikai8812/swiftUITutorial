@@ -23,7 +23,7 @@ struct LandmarkDetail: View {
             
             VStack(alignment: .leading) {
                 
-                LandmarkRow(landMark: landmarks[0])
+                LandmarkRow(landMark: landmark)
                 Text(landmark.name)
                     .font(.title)
                 HStack {
@@ -48,5 +48,5 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: landmarks[2])
+    LandmarkDetail(landmark: ModelData().landmarks[0])
 }
