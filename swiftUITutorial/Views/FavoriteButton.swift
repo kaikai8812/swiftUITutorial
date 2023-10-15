@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct FavoriteButton: View {
+    
+    @Binding var isSet: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            isSet.toggle()
+        } label: {
+            Label("Toggle Favorite", systemImage: isSet ? "star.fill" : "star")  //  label文字列は、UIでは表示されないが、voiceOverで使用されるため、定義するべき
+                .labelStyle(.iconOnly)
+                .foregroundStyle(isSet ? .yellow : .gray)
+        }
     }
 }
 
 #Preview {
-    FavoriteButton()
+    FavoriteButton(isSet: .constant(false))
 }
