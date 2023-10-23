@@ -24,6 +24,7 @@ struct HikeDetail: View {
 
             HStack(spacing: 25) {
                 ForEach(buttons, id: \.0) { value in
+                    //  Buttonが押下されたら、buttonに設定されているkeyPathが、dataToShowに入る。
                     Button {
                         dataToShow = value.1
                     } label: {
@@ -39,6 +40,11 @@ struct HikeDetail: View {
         }
     }
 }
+
+// 処置の流れ的には、
+//  buttonが押される
+//  buttonに関連するKeyPathが、dataToShowに入る
+//  dataToShowのやつには、glayになる。
 
 #Preview {
     HikeDetail(hike: ModelData().hikes[0])

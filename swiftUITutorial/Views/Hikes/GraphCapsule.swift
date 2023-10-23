@@ -11,6 +11,7 @@ struct GraphCapsule: View, Equatable {
     var index: Int
     var color: Color
     var height: CGFloat
+    //  rangeとoverAllRangeがどのように使われているかが、いまいちわからん
     var range: Range<Double>
     var overallRange: Range<Double>
 

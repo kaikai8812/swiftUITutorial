@@ -8,6 +8,17 @@ The elevation, heart rate, and pace of a hike plotted on a graph.
 import SwiftUI
 
 struct HikeGraph: View {
+    
+    struct Test {
+        var name: String
+        var age: Int
+        var level: Int
+    }
+    
+    var test = Test(name: "name", age: 20, level: 100)
+    
+    let testKeyPath: KeyPath<Test, Int> = \.age
+    
     var hike: Hike
     var path: KeyPath<Hike.Observation, Range<Double>>
 
@@ -43,6 +54,9 @@ struct HikeGraph: View {
                 }
                 .offset(x: 0, y: proxy.size.height * heightRatio)
             }
+            .task {
+                print(test[keyPath: testKeyPath])
+            }
         }
     }
 }
@@ -50,6 +64,8 @@ struct HikeGraph: View {
 func rangeOfRanges<C: Collection>(_ ranges: C) -> Range<Double>
     where C.Element == Range<Double> {
     guard !ranges.isEmpty else { return 0..<0 }
+        // rangeで、範囲の配列を取得する。
+        //  lowは、範囲の配列に中で、一番小さいものを、highは、一番大きいものを取得している。
     let low = ranges.lazy.map { $0.lowerBound }.min()!
     let high = ranges.lazy.map { $0.upperBound }.max()!
     return low..<high
@@ -62,6 +78,7 @@ func magnitude(of range: Range<Double>) -> Double {
 #Preview {
     let hike = ModelData().hikes[0]
     return Group {
+        //  引数としては、hikeをそのままももらっているけど、その中でどれをグラフ描画に使用するかは、pathをもらって、判断しているような感じ
         HikeGraph(hike: hike, path: \.elevation)
             .frame(height: 200)
         HikeGraph(hike: hike, path: \.heartRate)
