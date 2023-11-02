@@ -16,6 +16,15 @@ struct ProfileHost: View {
         VStack(alignment: .leading, spacing: 20) {
             
             HStack {
+                
+                if editMode?.wrappedValue == .active {
+                    Button("Cancel", role: .cancel) {
+                        //  Cancelボタンを押したときは、onDisapperが呼ばれる前に、draftProfileがmodelDataのもの(編集前のもの)に切り替わるため、結果的に編集したデータがmodelDataに更新されない。
+                        draftProfile = modelData.profile
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
+                
                 Spacer()
                 EditButton()
             }
@@ -24,6 +33,12 @@ struct ProfileHost: View {
                 ProfileSummary(profile: modelData.profile)
             } else {
                 ProfileEditor(profile: $draftProfile)
+                    .onAppear {
+                        draftProfile = modelData.profile
+                    }
+                    .onDisappear {
+                        modelData.profile = draftProfile
+                    }
             }
         }
         .padding()
