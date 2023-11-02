@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83F030D2AF3F8B3009D3980 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F030C2AF3F8B3009D3980 /* ProfileEditor.swift */; };
 		E88010E82AD134F200BC63F3 /* swiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88010E72AD134F200BC63F3 /* swiftUITutorialApp.swift */; };
 		E88010EA2AD134F200BC63F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88010E92AD134F200BC63F3 /* ContentView.swift */; };
 		E88010EC2AD134F300BC63F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88010EB2AD134F300BC63F3 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E83F030C2AF3F8B3009D3980 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		E88010E42AD134F200BC63F3 /* swiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88010E72AD134F200BC63F3 /* swiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftUITutorialApp.swift; sourceTree = "<group>"; };
 		E88010E92AD134F200BC63F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -150,6 +152,7 @@
 			children = (
 				E88898342AEE8637001899C7 /* ProfileHost.swift */,
 				E88898362AEE880F001899C7 /* ProfileSummary.swift */,
+				E83F030C2AF3F8B3009D3980 /* ProfileEditor.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				E88898202AE541FC001899C7 /* Hike.swift in Sources */,
 				E8FADEDD2ADBDB7900F9B090 /* RotatedBadgeSymbol.swift in Sources */,
 				E8FADEDB2ADBD90F00F9B090 /* BadgeSymbol.swift in Sources */,
+				E83F030D2AF3F8B3009D3980 /* ProfileEditor.swift in Sources */,
 				E89DD5B92AD59C3500C9DE98 /* LandmarkList.swift in Sources */,
 				E88898292AE543EF001899C7 /* HikeView.swift in Sources */,
 				E89DD5BB2AD59E6B00C9DE98 /* LandmarkDetail.swift in Sources */,
