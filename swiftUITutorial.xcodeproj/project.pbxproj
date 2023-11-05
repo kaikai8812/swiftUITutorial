@@ -11,6 +11,7 @@
 		E83F03102AF76EB6009D3980 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F030F2AF76EB6009D3980 /* PageViewController.swift */; };
 		E83F03122AF77197009D3980 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F03112AF77197009D3980 /* FeatureCard.swift */; };
 		E83F03142AF7738B009D3980 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F03132AF7738B009D3980 /* PageView.swift */; };
+		E83F03162AF79092009D3980 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F03152AF79092009D3980 /* PageControl.swift */; };
 		E88010E82AD134F200BC63F3 /* swiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88010E72AD134F200BC63F3 /* swiftUITutorialApp.swift */; };
 		E88010EA2AD134F200BC63F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88010E92AD134F200BC63F3 /* ContentView.swift */; };
 		E88010EC2AD134F300BC63F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88010EB2AD134F300BC63F3 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		E83F030F2AF76EB6009D3980 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		E83F03112AF77197009D3980 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		E83F03132AF7738B009D3980 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		E83F03152AF79092009D3980 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		E88010E42AD134F200BC63F3 /* swiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88010E72AD134F200BC63F3 /* swiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftUITutorialApp.swift; sourceTree = "<group>"; };
 		E88010E92AD134F200BC63F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -99,6 +101,7 @@
 			children = (
 				E83F030F2AF76EB6009D3980 /* PageViewController.swift */,
 				E83F03132AF7738B009D3980 /* PageView.swift */,
+				E83F03152AF79092009D3980 /* PageControl.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				E88011182AD149D000BC63F3 /* MapView.swift in Sources */,
 				E88898262AE543EF001899C7 /* GraphCapsule.swift in Sources */,
 				E88010E82AD134F200BC63F3 /* swiftUITutorialApp.swift in Sources */,
+				E83F03162AF79092009D3980 /* PageControl.swift in Sources */,
 				E8FADED32ADBB2F700F9B090 /* FavoriteButton.swift in Sources */,
 				E88898302AEE5052001899C7 /* CategoryItem.swift in Sources */,
 				E88898282AE543EF001899C7 /* HikeDetail.swift in Sources */,
